@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guessing game</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="content">
+      <h1>Guess The Number</h1>
+
+      <p id="guess-value">
+        We have selected a random number between (<span id="first">1</span> -
+        <span id="last">100</span>). See if you can guess it.
+      </p>
+
+      <div class="form">
+        <label for="guessField">Enter a guess: </label>
+        <br />
+        <input type="number" id="guessField" class="guessField" /> <br />
+        <button class="guessSubmit" id="submitguess">Submit Guess</button>
+        <p class="Random-number"></p>
+        <p class="result">Make your guess</p>
+        <p class="end"></p>
+        <p class="life">Make your guess</p>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

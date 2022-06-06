@@ -1,0 +1,135 @@
+html {
+  font-family: sans-serif;
+  height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(42, 192, 144) 50%,
+    rgb(192, 150, 54) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 4s;
+}
+
+.bg3 {
+  animation-duration: 5s;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.25em;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  left: 50%;
+  padding: 5vmin;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: monospace;
+  font-size: 3rem;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+}
+
+label {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+}
+
+input {
+  text-align: center;
+  border: none;
+  height: 2rem;
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+.guessSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 80px;
+  background-color: #111827;
+  box-shadow: inset 20px 20px 39px #070a18, inset -20px -20px 39px #1b263e;
+  position: relative;
+  cursor: pointer;
+}
+
+.guessSubmit::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  height: calc(100% + 20px);
+  width: calc(100% + 20px);
+  background: linear-gradient(35deg, deepskyblue, deeppink, lawngreen);
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(3px);
+  margin: auto;
+  padding: auto;
+}
+
+.guessSubmit:hover::after {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
