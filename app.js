@@ -1,5 +1,6 @@
 const guessNumber = document.querySelector('.guessField');
 const guessSubmit = document.querySelector('.guessSubmit');
+const reBtn = document.querySelector('.reload');
 const randomValue = document.querySelector('.Random-number');
 const result = document.querySelector('.result');
 const life = document.querySelector('.life');
@@ -45,3 +46,9 @@ function Guess() {
   }
 }
 guessSubmit.addEventListener('click', Guess);
+
+window.addEventListener('load', event => {
+  reBtn.onclick = function () {
+    location.reload(true);
+  };
+});
