@@ -28,10 +28,12 @@ function Guess() {
           result.innerHTML = 'Your guess is high.';
           life.innerHTML = `You have ${live} tries left.`;
           last.innerHTML = guessNumber.value;
+          guessNumber.value = '';
         } else if (guessNumber.value < randomNumber) {
           result.innerHTML = 'Your guess is low.';
           life.innerHTML = `You have ${live} tries left.`;
           first.innerHTML = guessNumber.value;
+          guessNumber.value = '';
         }
       } else if (guessNumber.value == randomNumber) {
         end.innerHTML = 'YOU WON!';
