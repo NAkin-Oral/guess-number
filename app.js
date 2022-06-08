@@ -5,6 +5,7 @@ const randomValue = document.querySelector('.Random-number');
 const result = document.querySelector('.result');
 const life = document.querySelector('.life');
 const end = document.querySelector('.end');
+const form = document.getElementById('form');
 const first = document.querySelector('#first');
 const last = document.querySelector('#last');
 
@@ -53,11 +54,15 @@ function Guess() {
   }
 }
 guessSubmit.addEventListener('click', Guess);
-guessSubmit.addEventListener('keypress', e => {
-  if (e.key === 'Enter') {
-    Guess;
-  }
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  Guess();
 });
+// guessSubmit.addEventListener('keypress', e => {
+//   if (e.key === 'Enter') {
+//     Guess;
+//   }
+// });
 reBtn.onclick = function () {
   location.reload(true);
 };
