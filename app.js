@@ -15,6 +15,10 @@ let randomNumber = Math.floor(Math.random() * 100 + 1);
 
 let live = 5;
 
+window.onload = function () {
+  guessNumber.focus();
+};
+
 function Guess() {
   console.log(randomNumber);
   if (guessNumber.value === '') {
@@ -56,7 +60,11 @@ function Guess() {
 guessSubmit.addEventListener('click', Guess);
 form.addEventListener('submit', e => {
   e.preventDefault();
-  Guess();
+  if (live > 0) {
+    Guess();
+  } else {
+    return false;
+  }
 });
 // guessSubmit.addEventListener('keypress', e => {
 //   if (e.key === 'Enter') {
