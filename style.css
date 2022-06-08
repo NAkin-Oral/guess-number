@@ -39,7 +39,7 @@ body {
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   left: 50%;
-  padding: 5vmin;
+  padding: 2vmin;
   position: fixed;
   text-align: center;
   top: 50%;
@@ -62,18 +62,18 @@ body {
 
 h1 {
   font-family: monospace;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 label {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0.7rem;
 }
 
@@ -90,10 +90,10 @@ input {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 20px;
+  font-size: 1rem;
   height: 5rem;
   width: 5rem;
-  border-radius: 80px;
+  border-radius: 50%;
   background-color: #111827;
   box-shadow: inset 20px 20px 39px #070a18, inset -20px -20px 39px #1b263e;
   position: relative;
@@ -129,7 +129,7 @@ input {
   display: inline-block;
   font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 2.5;
   outline: transparent;
