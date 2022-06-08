@@ -63,7 +63,7 @@ form.addEventListener('submit', e => {
   if (live > 0) {
     Guess();
   } else {
-    return false;
+    location.reload(true);
   }
 });
 // guessSubmit.addEventListener('keypress', e => {
