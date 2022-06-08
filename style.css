@@ -167,3 +167,11 @@ input {
     transform: translateX(25%);
   }
 }
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    overflow: scroll;
+  }
+}
